@@ -266,7 +266,21 @@ main {
 .audience-2 {
     grid-area: audience-2;
 }
-@keyframes hover {
+.appearing-image {
+    box-shadow: 1em 1em 2em .25em rgba(0,0,0,.2);
+    opacity: 0;
+    transform: translateY(4em) rotateZ(-5deg);
+    transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+              opacity .3s .25s ease-out;
+    width: 100%;
+    will-change: transform, opacity;
+}
+.is-visible {
+    opacity: 1;
+    transform: rotateZ(0deg);
+}
+
+/*@keyframes hover {
     from {box-shadow: 1em 1em 2em .25em rgba(0,0,0,.2);
         opacity: 0;
         transform: translateY(4em) rotateZ(-5deg);
@@ -277,19 +291,6 @@ main {
     to {opacity: 1;
         transform: rotateZ(0deg);}
 }
-/*.appearing-image {
-    box-shadow: 1em 1em 2em .25em rgba(0,0,0,.2);
-    opacity: 0;
-    transform: translateY(4em) rotateZ(-5deg);
-    transition: transform 4s .25s cubic-bezier(0,1,.3,1),
-              opacity .3s .25s ease-out;
-    width: 100%;
-    will-change: transform, opacity;
-}
-.is-visible, .appearing-image:hover {
-    opacity: 1;
-    transform: rotateZ(0deg);
-}*/
 .appearing-image {
     box-shadow: 1em 1em 2em .25em rgba(0,0,0,.2);
     width: 100%;
@@ -298,10 +299,9 @@ main {
     animation-fill-mode: backwards;
     animation-play-state: paused;      
 }
-
 .appearing-image:active,
 .appearing-image:focus,
 .appearing-image:hover {
     animation-fill-mode: forwards;
     animation-play-state: running;
-}
+}*/
