@@ -235,8 +235,15 @@ main {
 }
 .scholar-text {
     grid-area: scholar-text;
-    margin-top: auto;
-    margin-bottom: auto;
+    height: 100%;
+    position: relative;
+}
+.photo-grid-text-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: fit-content;
 }
 .academic-1 {
     grid-area: academic-1;
@@ -246,8 +253,8 @@ main {
 }
 .thinker-text {
     grid-area: thinker-text;
-    margin-top: auto;
-    margin-bottom: auto;
+    height: 100%;
+    position: relative;
 }
 .three-four-bars {
     grid-area: three-four-bars;
@@ -257,8 +264,8 @@ main {
 }
 .orator-text {
     grid-area: orator-text;
-    margin-top: auto;
-    margin-bottom: auto;
+    height: 100%;
+    position: relative;
 }
 .audience-1 {
     grid-area: audience-1;
