@@ -1,0 +1,281 @@
+* {
+    font: inherit;
+}
+@font-face {
+    font-family: Lemon Milk;
+    src: url("fonts/LEMONMILK/LEMONMILK-Light.otf");
+}
+@font-face {
+    font-family: Ostritch Sans;
+    src: url("fonts/ostrich-sans/OstrichSans-Medium.otf");
+}
+@font-face {
+    font-family: Louis George;
+    src: url("fonts/louis_george_caf/Louis\ George\ Cafe.ttf");
+}
+@font-face {
+    font-family: Jost;
+    src: url("fonts/Jost/Jost-Regular.ttf");
+}
+h1 {
+    font-family: "Lemon Milk";
+    font-size: 2.5em;
+    color: white;
+}
+h2 {
+    font-family: "Ostritch Sans";
+    font-size: 2.2em;
+    letter-spacing: 0.05em;
+    color: white;
+}
+h3 {
+    font-family: "Louis George";
+    font-size: 1.3em;
+    color: white;
+}
+p {
+    font-family: "Jost";
+    font-size: 1em;
+}
+/*.button {
+    font-family: "Jost";
+    border: none;
+    box-shadow: 0px 1px 6px 0px whitesmoke;
+    background-color: #263037;
+    color: white;
+    padding: 0.5em 0.5em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2em;
+}
+@keyframes changeButtonColor {
+    from {background-color: #263037; color: white;}
+    to {background-color: #7AD7F0; color: #263037;}
+}
+.button:hover {
+    animation: changeButtonColor 200ms ease-in-out both;
+}*/
+header p, footer p {
+    font-size: 0.9em;
+}
+.centered-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+figure {
+    margin: 0;
+}
+html {
+    display: grid;
+    background-color: #161c20;
+    color: #e5e5e5;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "header" "main" "footer";
+    grid-template-rows: auto 1fr auto;
+}
+header {
+    grid-area: header;
+    box-shadow: 0px 2px 6px 0px white;
+    /*background-color: #263037;*/
+    background-color: white;
+}
+@media screen and (min-width: 1200px) {
+    nav, main {
+        width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media screen and (min-width: 1000px) {
+    .footer-content {
+        width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+nav {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: "logo about newsroom portfolio contact";
+    text-align: center;
+}
+nav a, footer a {
+    text-decoration: none;
+    color: gray;
+}
+nav a:hover, footer a:hover {
+    color: #7AD7F0;
+}
+nav .logo {
+    grid-area: logo;
+}
+nav .logo a img {
+    height: 2.25em;
+    object-position: left center;
+    margin-left: 0.5em;
+    margin-top: 0.4em;
+}
+nav .about {
+    grid-area: about;
+}
+nav .newsroom {
+    grid-area: newsroom;
+}
+nav .portfolio {
+    grid-area: portfolio;
+}
+nav .contact {
+    grid-area: contact;
+}
+footer {
+    grid-area: footer;
+    background-color: black;
+}
+.footer-content {
+    display: grid;
+    grid-template-columns: 5em repeat(4, 1fr);
+    grid-auto-rows: auto;
+    grid-template-areas: "site-logo about-links newsroom-links portfolio-links social-links"
+    "site-logo about-links contact-links portfolio-links social-links"
+    ". footer-message footer-message footer-message .";
+    color: gray
+}
+.footer-content .about-links, .footer-content .newsroom-links, .footer-content .portfolio-links, .footer-content .contact-links, .footer-content .social-links {
+    margin-left: 20%;
+}
+.footer-content .site-logo {
+    grid-area: site-logo;
+}
+.footer-content .site-logo img {
+    margin-top: 1em;;
+    height: 2.25em;
+}
+.footer-content .about-links {
+    grid-area: about-links;
+}
+.footer-content .newsroom-links {
+    grid-area: newsroom-links;
+}
+.footer-content .portfolio-links {
+    grid-area: portfolio-links;
+}
+.footer-content .contact-links {
+    grid-area: contact-links;
+}
+.footer-content .social-links {
+    grid-area: social-links;
+}
+.footer-content .footer-message {
+    grid-area: footer-message;
+}
+.footer-heading {
+    font-weight: bold;
+    font-size: 1em;
+}
+main {
+    grid-area: main;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    display: grid;
+    text-align: justify;
+}
+.hmpg-main {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    grid-template-areas: "intro intro intro"
+    "hmpg-photo-grid hmpg-photo-grid hmpg-photo-grid";
+}
+.intro {
+    grid-area: intro;
+    position: relative;
+    text-align: center;
+    margin-bottom: 1em;
+}
+.intro h1 {
+    color: white;
+    font-size: 4vw;
+}
+@media screen and (max-width: 450px) {
+    .intro h1 {
+        font-size: 18px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .intro h1 {
+        font-size: 48px;
+    }
+}
+.intro-text {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0,0,0,0.6);
+}
+.hmpg-photo-grid {
+    grid-area: hmpg-photo-grid;
+    text-align: center;
+    display: grid;
+    gap: 1.5em;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "scholar-text academic-1 audience-2"
+    "academic-2 thinker-text cubes"
+    "audience-1 three-four-bars orator-text";
+}
+.scholar-text {
+    grid-area: scholar-text;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.academic-1 {
+    grid-area: academic-1;
+}
+.academic-2 {
+    grid-area: academic-2;
+}
+.thinker-text {
+    grid-area: thinker-text;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.three-four-bars {
+    grid-area: three-four-bars;
+}
+.cubes {
+    grid-area: cubes;
+}
+.orator-text {
+    grid-area: orator-text;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.audience-1 {
+    grid-area: audience-1;
+}
+.audience-2 {
+    grid-area: audience-2;
+}
+.appearing-image {
+    box-shadow: 1em 1em 2em .25em rgba(0,0,0,.2);
+    opacity: 0;
+    transform: translateY(4em) rotateZ(-5deg);
+    transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+              opacity .3s .25s ease-out;
+    width: 100%;
+    will-change: transform, opacity;
+}
+.is-visible {
+    opacity: 1;
+    transform: rotateZ(0deg);
+  }
