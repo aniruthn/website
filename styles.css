@@ -96,7 +96,7 @@ header {
     }
 }
 @media screen and (min-width: 1000px) {
-    .footer-content {
+    .footer-content, .social-links, .footer-message {
         width: 1000px;
         margin-left: auto;
         margin-right: auto;
@@ -139,19 +139,25 @@ nav .contact {
 footer {
     grid-area: footer;
     background-color: black;
+    color: gray;
     font-size: 0.9em;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    grid-template-areas: "footer-content" "social-links" "footer-message";
 }
 .footer-content {
+    grid-area: footer-content;
     display: grid;
-    grid-template-columns: 5em repeat(4, 1fr);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-auto-rows: auto;
-    grid-template-areas: "site-logo about-links newsroom-links portfolio-links social-links"
-    "site-logo about-links contact-links portfolio-links social-links"
-    ". footer-message footer-message footer-message .";
-    color: gray
+    grid-template-areas: "site-logo about-links newsroom-links portfolio-links"
+    "site-logo about-links contact-links portfolio-links"
+    "social-links social-links social-links social-links"
+    "footer-message footer-message footer-message footer-message";
 }
-.footer-content .about-links, .footer-content .newsroom-links, .footer-content .portfolio-links, .footer-content .contact-links, .footer-content .social-links {
-    margin-left: 20%;
+.footer-content .site-logo, .footer-content .about-links, .footer-content .newsroom-links, .footer-content .portfolio-links, .footer-content .contact-links {
+    text-align: center;
 }
 .footer-content .site-logo {
     grid-area: site-logo;
@@ -172,11 +178,65 @@ footer {
 .footer-content .contact-links {
     grid-area: contact-links;
 }
-.footer-content .social-links {
+.social-links {
     grid-area: social-links;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-auto-rows: auto;
+    grid-template-areas: "social-title social-title social-title social-title social-title social-title social-title"
+    "youtube linkedin facebook messenger github resume mail"
 }
-.footer-content .footer-message {
+.social-title {
+    grid-area: social-title;
+}
+.youtube, .linkedin, .facebook, .messenger, .resume, .mail {
+    position: relative;
+}
+@keyframes twirl {
+    from {transform: rotateY(0deg);}
+    to {transform: rotateY(90deg);}
+}
+.yt-c, .linkedin-c, .fb-c, .messenger-c, .resume-c, .document-c, .mail-c {
+    transform: rotateY(90deg);
+}
+.yt-d, .linkedin-d, .fb-d, .messenger-d, .resume-d, .document-d, .mail-d {
+    position: absolute;
+}
+.youtube:hover .yt-d, .linkedin:hover .linkedin-d, .facebook:hover .fb-d, .messenger:hover .messenger-d, .resume:hover .document-d, .mail:hover .mail-d {
+    animation: twirl 0.2s ease-in forwards;
+}
+.youtube:hover .yt-c, .linkedin:hover .linkedin-c, .facebook:hover .fb-c, .messenger:hover .messenger-c, .resume:hover .document-c, .mail:hover .mail-c {
+    animation: twirl 0.2s 0.2s ease-out forwards reverse;
+}
+.social-links img {
+    height: 30px;
+}
+.youtube {
+    grid-area: youtube;
+}
+.linkedin {
+    grid-area: linkedin;
+}
+.facebook {
+    grid-area: facebook;
+}
+.messenger {
+    grid-area: messenger;
+}
+.github {
+    grid-area: github;
+}
+.resume {
+    grid-area: resume;
+}
+.mail {
+    grid-area: mail;
+}
+.footer-message {
     grid-area: footer-message;
+    text-align: center;
+    font-size: 0.75em;
 }
 .footer-heading {
     font-weight: bold;
@@ -190,44 +250,58 @@ main {
     text-align: justify;
 }
 .hmpg-main {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     grid-auto-rows: auto;
-    grid-template-areas: "intro intro intro"
-    "hmpg-photo-grid hmpg-photo-grid hmpg-photo-grid"
-    "hmpg-testimonials hmpg-testimonials hmpg-testimonials";
+    grid-template-areas: "intro"
+    "hmpg-photo-grid"
+    "hmpg-testimonials";
 }
 .intro {
     grid-area: intro;
     position: relative;
     text-align: center;
-    margin-bottom: 2em;
+    margin-bottom: 4em;
 }
 .intro h1 {
     color: white;
     font-size: 4vw;
+    margin: 0;
+    background-color: rgba(0,0,0,0.6);
+}
+.intro p {
+    font-size: 1.5vw;
+    margin: 0 auto 0 auto;
+    background-color: rgba(0,0,0,0.6);
+    width: fit-content;
 }
 @media screen and (max-width: 450px) {
     .intro h1 {
         font-size: 18px;
+    }
+    .intro p {
+        font-size: 6.75px;
     }
 }
 @media screen and (min-width: 1200px) {
     .intro h1 {
         font-size: 48px;
     }
+    .intro p {
+        font-size: 18px;
+    }
 }
 .intro-text {
     position: absolute;
-    top: 30%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(0,0,0,0.6);
 }
 .hmpg-photo-grid {
     grid-area: hmpg-photo-grid;
     text-align: center;
     display: grid;
     gap: 1.5em;
+    margin-bottom: 4em;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-template-areas: "scholar-text academic-1 audience-2"
@@ -275,7 +349,7 @@ main {
     grid-area: audience-2;
 }
 .appearing-image {
-    box-shadow: 1em 1em 2em .25em rgba(0,0,0,.2);
+    box-shadow:  1em 1em 2em .25em rgba(0,0,0,.2);
     opacity: 0;
     transform: translateY(4em) rotateZ(-5deg);
     transition: transform 4s .25s cubic-bezier(0,1,.3,1),
@@ -289,6 +363,34 @@ main {
 }
 .hmpg-testimonials {
     grid-area: hmpg-testimonials;
+    display: grid;
+    gap: 1.5em;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: auto;
+    grid-template-areas: "testimonial-title testimonial-title testimonial-title testimonial-title" "testimonial-1 testimonial-2 testimonial-3 testimonial-4";
+}
+.testimonial-title {
+    grid-area: testimonial-title;
+    text-align: center;
+    margin-bottom: 2em;
+}
+.testimonial-1 {
+    grid-area: testimonial-1;
+}
+.testimonial-2 {
+    grid-area: testimonial-2;
+}
+.testimonial-3 {
+    grid-area: testimonial-3;
+}
+.testimonial-4 {
+    grid-area: testimonial-4;
+}
+.test-card p {
+    margin: 2em;
+}
+.test-card:hover {
+    box-shadow: 0 0 2em .25em rgba(0,0,0,.2);
 }
 
 /*@keyframes hover {
