@@ -181,14 +181,12 @@ footer {
 .social-links {
     grid-area: social-links;
     text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-auto-rows: auto;
-    grid-template-areas: "social-title social-title social-title social-title social-title social-title social-title"
-    "youtube linkedin facebook messenger github resume mail"
-}
-.social-title {
-    grid-area: social-title;
+    grid-template-areas: "youtube linkedin facebook messenger github resume mail"
 }
 .youtube, .linkedin, .facebook, .messenger, .resume, .mail {
     position: relative;
