@@ -93,6 +93,7 @@ header {
     background: none;
     border: none;
     color: inherit;
+    outline: none;
 }
 #menu-button img {
     height: 2em;
