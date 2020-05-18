@@ -1,3 +1,6 @@
+.header-phone {
+    display: none;
+}
 * {
     font: inherit;
 }
