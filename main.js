@@ -1,3 +1,4 @@
+// Toggles navigation - only for phones
 function toggleNav() {
   var nav = document.getElementById('nav');
   var displaySetting = getComputedStyle(nav).display;
@@ -9,6 +10,7 @@ function toggleNav() {
   }
 }
 
+// Adjusts homepage animations of images based on scroll
 // Detect request animation frame
 var scroll = window.requestAnimationFrame;
              // IE Fallback
@@ -34,7 +36,6 @@ loop();
 
 // Helper function from: http://stackoverflow.com/a/7557433/274826
 function isElementInViewport(el) {
-  // special bonus for those using jQuery
   if (typeof jQuery === "function" && el instanceof jQuery) {
     el = el[0];
   }
