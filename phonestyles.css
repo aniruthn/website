@@ -18,7 +18,13 @@
 }
 @font-face {
     font-family: Jost;
+    src: url("fonts/Jost/Jost-Italic.ttf");
+    font-style: italic;
+}
+@font-face {
+    font-family: Jost;
     src: url("fonts/Jost/Jost-Regular.ttf");
+    font-style: normal;
 }
 h1 {
     font-family: "Lemon Milk";
@@ -36,9 +42,13 @@ h3 {
     font-size: 1.3em;
     color: white;
 }
-p {
+li, p {
     font-family: "Jost";
     font-size: 1em;
+    font-style: normal;
+}
+.italic {
+    font-style: italic;
 }
 header p, footer p {
     font-size: 0.9em;
@@ -60,7 +70,7 @@ html {
     scroll-behavior: smooth;
 }
 html, body {
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
 }
 body {
     margin: 0;
@@ -101,11 +111,11 @@ header {
 #menu-button img {
     height: 2em;
 }
-nav a, footer a {
+nav a, footer a, .side-nav a {
     text-decoration: none;
     color: gray;
 }
-nav a:hover, footer a:hover {
+nav a:hover, footer a:hover, .side-nav a:hover {
     color: #7AD7F0;
 }
 nav .logo {
@@ -390,3 +400,127 @@ main {
     animation-fill-mode: forwards;
     animation-play-state: running;
 }*/
+
+.about-main {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    grid-template-areas: "side-nav" "bio"
+    "experience"
+    "interests";
+}
+.side-nav-container {
+    grid-area: side-nav;
+    text-align: center;
+}
+#bio, #experience, #interests, .about-title {
+    margin-left: 2em;
+    margin-right: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+#bio {
+    grid-area: bio;
+    margin-bottom: 2em;
+    display: grid;
+    gap: 2em;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    grid-template-areas: "bio-title" "precis" "bio-image" "education";
+}
+.bio-title {
+    grid-area: bio-title;
+    text-align: center;
+}
+.precis {
+    grid-area: precis;
+}
+.education {
+    grid-area: education;
+    text-align: left;
+}
+.edu-border {
+    padding-bottom: 1em;
+    border-bottom: 1px solid white;
+}
+main a {
+    color: #e5e5e5;
+    text-decoration: none;
+}
+main a:hover {
+    color: gray;
+}
+.bio-image {
+    grid-area: bio-image;
+}
+#experience {
+    grid-area: experience;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    display: grid;
+    gap: 2em;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    grid-template-areas: "experience-title"
+    "roles" "achievements" "service";
+}
+.experience-title {
+    grid-area: experience-title;
+    text-align: center;
+}
+.roles {
+    grid-area: roles;
+}
+.achievements {
+    grid-area: achievements;
+}
+.service {
+    grid-area: service;
+}
+#interests {
+    grid-area: interests;
+    margin-top: 2em;
+    display: grid;
+    gap: 2em;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    grid-template-areas: "interests-title"
+    "podcasts" "basketball-hoop" "frisbee" "podcast-mic" "chess" "chess-pawn" "reading" "philosophy-book" "philosophy";
+}
+.interests-title {
+    grid-area: interests-title;
+    text-align: center;
+}
+.chess {
+    grid-area: chess;
+}
+.frisbee {
+    grid-area: frisbee;
+}
+.podcasts {
+    grid-area: podcasts;
+}
+.reading {
+    grid-area: reading;
+}
+.philosophy {
+    grid-area: philosophy;
+}
+.basketball-hoop {
+    grid-area: basketball-hoop;
+}
+.chess-pawn {
+    grid-area: chess-pawn;
+}
+.philosophy-book {
+    grid-area: philosophy-book;
+}
+.podcast-mic {
+    grid-area: podcast-mic;
+}
+.caption {
+    font-size: 0.9em;
+    color: gray;
+    text-align: center;
+}
