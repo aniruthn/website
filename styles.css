@@ -74,7 +74,6 @@ header p, footer p {
 }
 .centered-image {
     width: 100%;
-    height: 100%;
     object-fit: contain;
     display: block;
 }
@@ -538,7 +537,7 @@ main {
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: auto;
     grid-template-areas: "interests-title interests-title interests-title"
-    "chess frisbee podcasts" "reading philosophy .";
+    "podcasts basketball-hoop frisbee" "podcast-mic chess chess-pawn" "reading philosophy-book philosophy";
 }
 .interests-title {
     grid-area: interests-title;
@@ -558,4 +557,21 @@ main {
 }
 .philosophy {
     grid-area: philosophy;
+}
+.basketball-hoop {
+    grid-area: basketball-hoop;
+}
+.chess-pawn {
+    grid-area: chess-pawn;
+}
+.philosophy-book {
+    grid-area: philosophy-book;
+}
+.podcast-mic {
+    grid-area: podcast-mic;
+}
+.caption {
+    font-size: 0.9em;
+    color: gray;
+    text-align: center;
 }
