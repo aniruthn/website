@@ -497,11 +497,11 @@ main {
     padding-bottom: 1em;
     border-bottom: 1px solid white;
 }
-.education a, #experience a {
+main a {
     color: #e5e5e5;
     text-decoration: none;
 }
-.education a:hover, #experience a:hover {
+main a:hover {
     color: gray;
 }
 .bio-image {

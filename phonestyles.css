@@ -70,7 +70,7 @@ html {
     scroll-behavior: smooth;
 }
 html, body {
-    /*overflow-x: hidden;*/
+    overflow-x: hidden;
 }
 body {
     margin: 0;
@@ -272,6 +272,7 @@ main {
 }
 .hmpg-photo-grid {
     grid-area: hmpg-photo-grid;
+    width: 100vw;
     text-align: center;
     display: grid;
     gap: 1.5em;
@@ -412,7 +413,7 @@ main {
     grid-area: side-nav;
     text-align: center;
 }
-#bio, #experience, #interests, .about-title {
+#bio, #experience, #interests, .side-nav-container {
     margin-left: 2em;
     margin-right: 2em;
     padding-left: 2em;
