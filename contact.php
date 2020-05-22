@@ -1,10 +1,10 @@
 <?php
  
 if($_POST) {
-    $visitor_name = "";
-    $visitor_email = "";
-    $email_title = "";
-    $visitor_message = "";
+    $visitor_name = $_POST['visitor_name'];
+    $visitor_email = $_POST['visitor_email'];
+    $email_title = $_POST['email_title'];
+    $visitor_message = $_POST['visitor_message'];
     $recipient = "aniruth@aniruthn.com"
      
     /*if(isset($_POST['visitor_name'])) {
