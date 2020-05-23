@@ -593,11 +593,11 @@ main a:hover {
 
 /*portfolio styles*/
 .portfolio-main {
-    grid-template-columns: auto repeat(3, 1fr);
-    grid-template-rows: auto 1fr;
-    grid-template-areas: "side-nav portfolio-intro portfolio-intro portfolio-intro"
-    "side-nav projects videos updates"
-    "side-nav resume-link resume-link resume-link";
+    grid-template-columns: auto repeat(2, 1fr);
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: "side-nav portfolio-intro portfolio-intro"
+    "side-nav projects videos"
+    "side-nav resume-link resume-link";
 }
 .portfolio-title {
     text-align: center;
@@ -615,10 +615,7 @@ main a:hover {
 .portfolio-main .videos {
     grid-area: videos;
 }
-.portfolio-main .updates {
-    grid-area: updates;
-}
-.portfolio-main .projects h3, .portfolio-main .videos h3, .portfolio-main .updates h3, .portfolio-intro p, .resume-link p {
+.portfolio-main .projects h3, .portfolio-main .videos h3, .portfolio-intro p, .resume-link p {
     text-align: center;
 }
 .portfolio-pic {
@@ -667,23 +664,6 @@ main a:hover {
 }
 .videos-intro {
     grid-area: videos-intro;
-}
-
-/*updates styles*/
-.updates-main {
-    grid-template-columns: auto 1fr;
-    grid-template-rows: auto 1fr;
-    grid-template-areas: "side-nav updates-intro";
-}
-.updates-title {
-    text-align: center;
-    writing-mode: vertical-rl;
-    text-orientation: sideways;
-    transform: rotate(-180deg);
-    margin: 3em 0 0 0;
-}
-.updates-intro {
-    grid-area: updates-intro;
 }
 
 /*contact styles*/
