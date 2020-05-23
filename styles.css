@@ -568,7 +568,7 @@ main a:hover {
 .newsroom-main {
     grid-template-columns: auto 1fr;
     grid-auto-rows: auto;
-    grid-template-areas: "side-nav contact-form";
+    grid-template-areas: "side-nav newsroom-intro";
 }
 .newsroom-title {
     text-align: center;
@@ -576,6 +576,9 @@ main a:hover {
     text-orientation: sideways;
     transform: rotate(-180deg);
     margin: 3em 0 0 0;
+}
+.newsroom-intro {
+    grid-area: newsroom-intro;
 }
 
 /*portfolio styles*/
@@ -594,7 +597,6 @@ main a:hover {
 }
 .portfolio-intro {
     grid-area: portfolio-intro;
-    height: min-content;
 }
 .portfolio-main .projects {
     grid-area: projects;
