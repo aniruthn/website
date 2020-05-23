@@ -260,12 +260,22 @@ main {
     font-size: 4vw;
     margin: 0;
     background-color: rgba(0,0,0,0.6);
+    opacity: 0;
+    transform: translateX(-4em);
+    animation: appear 1s ease-in-out both;
+}
+@keyframes appear {
+    from {opacity: 0; transform: translateX(-4em);}
+    to {opacity: 1; transform: none;}
 }
 .intro p {
     font-size: 1.5vw;
     margin: 0 auto 0 auto;
     background-color: rgba(0,0,0,0.6);
     width: fit-content;
+    opacity: 0;
+    transform: translateX(-4em);
+    animation: appear 1s ease-in-out both;
 }
 @media screen and (max-width: 450px) {
     .intro h1 {
@@ -586,7 +596,8 @@ main a:hover {
     grid-template-columns: auto repeat(3, 1fr);
     grid-template-rows: auto 1fr;
     grid-template-areas: "side-nav portfolio-intro portfolio-intro portfolio-intro"
-    "side-nav projects videos updates";
+    "side-nav projects videos updates"
+    "side-nav resume-link resume-link resume-link";
 }
 .portfolio-title {
     text-align: center;
@@ -607,8 +618,21 @@ main a:hover {
 .portfolio-main .updates {
     grid-area: updates;
 }
-.portfolio-main .projects h3, .portfolio-main .videos h3, .portfolio-main .updates h3, .portfolio-intro p {
+.portfolio-main .projects h3, .portfolio-main .videos h3, .portfolio-main .updates h3, .portfolio-intro p, .resume-link p {
     text-align: center;
+}
+.portfolio-pic {
+    transform: scale(0.8);
+}
+.portfolio-pic:hover {
+    animation: growPic 200ms ease-in-out both;
+}
+@keyframes growPic {
+    from {transform: scale(0.8);}
+    to {transform: scale(1);}
+}
+.resume-link {
+    grid-area: resume-link;
 }
 
 /*projects styles*/
