@@ -240,6 +240,8 @@ main {
     display: grid;
     text-align: justify;
 }
+
+/*hmpg styles*/
 .hmpg-main {
     grid-template-columns: 1fr;
     grid-auto-rows: auto;
@@ -426,6 +428,7 @@ main {
     animation-play-state: running;
 }*/
 
+/*about styles*/
 .about-main {
     grid-template-columns: auto 1fr;
     grid-auto-rows: auto;
@@ -561,14 +564,107 @@ main a:hover {
     text-align: center;
 }
 
-/*contact-form styles*/
-.contact-main {
+/*newsroom styles*/
+.newsroom-main {
     grid-template-columns: auto 1fr;
     grid-auto-rows: auto;
     grid-template-areas: "side-nav contact-form";
 }
-.contact-form {
-    grid-area: contact-form;
+.newsroom-title {
+    text-align: center;
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+    transform: rotate(-180deg);
+    margin: 3em 0 0 0;
+}
+
+/*portfolio styles*/
+.portfolio-main {
+    grid-template-columns: auto repeat(3, 1fr);
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "side-nav portfolio-intro portfolio-intro portfolio-intro"
+    "side-nav projects videos updates";
+}
+.portfolio-title {
+    text-align: center;
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+    transform: rotate(-180deg);
+    margin: 3em 0 0 0;
+}
+.portfolio-intro {
+    grid-area: portfolio-intro;
+    height: min-content;
+}
+.portfolio-main .projects {
+    grid-area: projects;
+}
+.portfolio-main .videos {
+    grid-area: videos;
+}
+.portfolio-main .updates {
+    grid-area: updates;
+}
+.portfolio-main .projects h3, .portfolio-main .videos h3, .portfolio-main .updates h3, .portfolio-intro p {
+    text-align: center;
+}
+
+/*projects styles*/
+.projects-main {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "side-nav projects-intro";
+}
+.projects-title {
+    text-align: center;
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+    transform: rotate(-180deg);
+    margin: 3em 0 0 0;
+}
+.projects-intro {
+    grid-area: projects-intro;
+}
+
+/*videos styles*/
+.videos-main {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "side-nav videos-intro";
+}
+.videos-title {
+    text-align: center;
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+    transform: rotate(-180deg);
+    margin: 3em 0 0 0;
+}
+.videos-intro {
+    grid-area: videos-intro;
+}
+
+/*updates styles*/
+.updates-main {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "side-nav updates-intro";
+}
+.updates-title {
+    text-align: center;
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+    transform: rotate(-180deg);
+    margin: 3em 0 0 0;
+}
+.updates-intro {
+    grid-area: updates-intro;
+}
+
+/*contact styles*/
+.contact-main {
+    grid-template-columns: auto 1fr;
+    grid-auto-rows: auto;
+    grid-template-areas: "side-nav contact-email";
 }
 .contact-title {
     text-align: center;
@@ -576,6 +672,9 @@ main a:hover {
     text-orientation: sideways;
     transform: rotate(-180deg);
     margin: 3em 0 0 0;
+}
+.contact-email {
+    grid-area: contact-email;
 }
 button {
     font-family: "Jost";
