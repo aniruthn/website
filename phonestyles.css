@@ -525,3 +525,142 @@ main a:hover {
     color: gray;
     text-align: center;
 }
+
+/*newsroom styles*/
+.newsroom-main {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    grid-template-areas: "side-nav" "newsroom-intro" " newsroom-descriptions";
+}
+.newsroom-title {
+    text-align: center;
+}
+.newsroom-intro, .newsroom-descriptions {
+    margin-left: 2em;
+    margin-right: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+.newsroom-intro {
+    grid-area: newsroom-intro;
+}
+.newsroom-descriptions {
+    grid-area: newsroom-descriptions;
+    display: grid;
+    gap: 2em;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+}
+
+/*portfolio styles*/
+.portfolio-main {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    grid-template-areas: "side-nav" "portfolio-intro"
+    "projects" "videos"
+    "resume-link";
+}
+.portfolio-title {
+    text-align: center;
+}
+.portfolio-intro, .portfolio-main .projects, .portfolio-main .videos, .resume-link {
+    margin-left: 2em;
+    margin-right: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+.portfolio-intro {
+    grid-area: portfolio-intro;
+}
+.portfolio-main .projects {
+    grid-area: projects;
+}
+.portfolio-main .videos {
+    grid-area: videos;
+}
+.portfolio-main .projects h3, .portfolio-main .videos h3, .portfolio-intro p, .resume-link p {
+    text-align: center;
+}
+.portfolio-pic {
+    transform: scale(0.8);
+}
+.portfolio-pic:hover {
+    animation: growPic 200ms ease-in-out both;
+}
+@keyframes growPic {
+    from {transform: scale(0.8);}
+    to {transform: scale(1);}
+}
+.resume-link {
+    grid-area: resume-link;
+}
+
+/*projects styles*/
+.projects-main {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    grid-template-areas: "side-nav" "projects-intro"
+    "projects-descriptions";
+}
+.projects-title {
+    text-align: center;
+}
+.projects-intro, .projects-descriptions {
+    margin-left: 2em;
+    margin-right: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+.projects-intro {
+    grid-area: projects-intro;
+}
+.projects-descriptions {
+    grid-area: projects-descriptions;
+    display: grid;
+    gap: 2em;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+}
+
+/*videos styles*/
+.videos-main {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    grid-template-areas: "side-nav" "videos-intro" "videos-description";
+}
+.videos-title {
+    text-align: center;
+}
+.videos-intro, .videos-description {
+    margin-left: 2em;
+    margin-right: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+.videos-intro {
+    grid-area: videos-intro;
+}
+.videos-description {
+    grid-area: videos-description;
+    display: grid;
+    gap: 2em;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+}
+
+/*contact styles*/
+.contact-main {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    grid-template-areas: "side-nav" "contact-email";
+}
+.contact-title {
+    text-align: center;
+}
+.contact-email {
+    grid-area: contact-email;
+    margin-left: 2em;
+    margin-right: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
