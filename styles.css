@@ -635,8 +635,9 @@ main a:hover {
 /*projects styles*/
 .projects-main {
     grid-template-columns: auto 1fr;
-    grid-template-rows: auto 1fr;
-    grid-template-areas: "side-nav projects-intro";
+    grid-auto-rows: auto;
+    grid-template-areas: "side-nav projects-intro"
+    "side-nav projects-descriptions";
 }
 .projects-title {
     text-align: center;
@@ -645,15 +646,25 @@ main a:hover {
     transform: rotate(-180deg);
     margin: 3em 0 0 0;
 }
+.projects-intro, .projects-descriptions {
+    margin-right: 3em;
+}
 .projects-intro {
     grid-area: projects-intro;
+}
+.projects-descriptions {
+    grid-area: projects-descriptions;
+    display: grid;
+    gap: 2em;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
 }
 
 /*videos styles*/
 .videos-main {
     grid-template-columns: auto 1fr;
     grid-template-rows: auto 1fr;
-    grid-template-areas: "side-nav videos-intro";
+    grid-template-areas: "side-nav videos-intro" "side-nav videos-description";
 }
 .videos-title {
     text-align: center;
@@ -662,8 +673,18 @@ main a:hover {
     transform: rotate(-180deg);
     margin: 3em 0 0 0;
 }
+.videos-intro, .videos-description {
+    margin-right: 3em;
+}
 .videos-intro {
     grid-area: videos-intro;
+}
+.videos-description {
+    grid-area: videos-description;
+    display: grid;
+    gap: 2em;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
 }
 
 /*contact styles*/
@@ -682,7 +703,8 @@ main a:hover {
 .contact-email {
     grid-area: contact-email;
 }
-button {
+
+/*button {
     font-family: "Jost";
     border: none;
     box-shadow: 0px 1px 6px 0px whitesmoke;
@@ -698,4 +720,4 @@ button {
 }
 button:hover {
     animation: changeButtonColor 200ms ease-in-out both;
-}
+}*/
