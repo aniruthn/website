@@ -578,7 +578,7 @@ main a:hover {
 .newsroom-main {
     grid-template-columns: auto 1fr;
     grid-auto-rows: auto;
-    grid-template-areas: "side-nav newsroom-intro";
+    grid-template-areas: "side-nav newsroom-intro" "side-nav newsroom-descriptions";
 }
 .newsroom-title {
     text-align: center;
@@ -587,8 +587,18 @@ main a:hover {
     transform: rotate(-180deg);
     margin: 3em 0 0 0;
 }
+.newsroom-intro, .newsroom-descriptions {
+    margin-right: 3em;
+}
 .newsroom-intro {
     grid-area: newsroom-intro;
+}
+.newsroom-descriptions {
+    grid-area: newsroom-descriptions;
+    display: grid;
+    gap: 2em;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
 }
 
 /*portfolio styles*/
