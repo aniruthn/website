@@ -451,13 +451,13 @@ main {
     writing-mode: vertical-rl;
     text-orientation: sideways;
     transform: rotate(-180deg);
-    margin: 3em 0 0 0;
+    margin: 1em 0 0 0;
 }
 .side-nav-container {
     grid-area: side-nav;
     width: fit-content;
     margin-left: 3em;
-    margin-right: 7.6875em;
+    margin-right: 3em;
 }
 .side-nav {
     width: fit-content;
@@ -465,7 +465,7 @@ main {
     margin: 0;
     top: 5em;
 }
-#bio, #experience, #interests, .about-title {
+#bio, #experience, #interests {
     margin-right: 3em;
 }
 #bio {
