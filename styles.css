@@ -463,7 +463,7 @@ main {
     width: fit-content;
     position: sticky;
     margin: 0;
-    top: 5em;
+    top: 2em;
 }
 #bio, #experience, #interests {
     margin-right: 3em;
