@@ -461,8 +461,9 @@ main {
 }
 .side-nav {
     width: fit-content;
-    position: fixed;
+    position: sticky;
     margin: 0;
+    top: 5em;
 }
 #bio, #experience, #interests, .about-title {
     margin-right: 3em;
