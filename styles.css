@@ -370,22 +370,15 @@ main {
     grid-area: hmpg-testimonials;
     display: grid;
     gap: 1.5em;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: auto;
-    grid-template-areas: "testimonial-title testimonial-title testimonial-title testimonial-title" "testimonial-1 testimonial-2 testimonial-3 testimonial-4";
-}
-@media screen and (max-width: 950px) {
-    .hmpg-testimonials {
-        gap: 0.5em;
-    }
+    grid-template-areas: "testimonial-title testimonial-title" 
+    "testimonial-1 testimonial-2"
+    "testimonial-3 testimonial-4";
 }
 @media screen and (max-width: 900px) {
     .hmpg-testimonials {
-        gap: 1.5em;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas: "testimonial-title testimonial-title" 
-        "testimonial-1 testimonial-2"
-        "testimonial-3 testimonial-4";
+        gap: 0.5em;
     }
 }
 .testimonial-title {
@@ -405,8 +398,27 @@ main {
 .testimonial-4 {
     grid-area: testimonial-4;
 }
+.test-card {
+    display: grid;
+    grid-template-columns: 1fr 100px;
+    grid-auto-rows: auto;
+    grid-template-areas: "test-text test-text" "test-bio test-pic";
+    padding: 2em;
+    gap: 2em;
+}
+.test-text {
+    grid-area: test-text;
+}
+.test-bio {
+    grid-area: test-bio;
+    max-width: 18em;
+}
+.test-pic {
+    grid-area: test-pic;
+}
 .test-card p {
-    margin: 2em;
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
 .test-card:hover {
     box-shadow: 0 0 2em .25em black;
@@ -606,6 +618,20 @@ main a:hover {
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: auto;
 }
+.news-snippet {
+    background-image: url(img/newspaper-background.jpg);
+    background-size: cover;
+    padding: 2em;
+    width: auto;
+}
+.news-snippet p, .news-snippet h3, .news-snippet a {
+    color: black;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.news-snippet p {
+    margin-top: 1em;
+}
 
 /*portfolio styles*/
 .portfolio-main {
@@ -718,6 +744,9 @@ main a:hover {
 }
 .contact-email {
     grid-area: contact-email;
+}
+.contact-email p, .contact-email h3 {
+    text-align: center;
 }
 
 /*button {
