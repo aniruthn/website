@@ -48,13 +48,17 @@
             border: 0.1em solid #00A2E8;
             border-radius: 50%;
             box-shadow: 0 0 0.1em 0 #00A2E8;
-            animation: increaseBorder 4.1s ease-in;
+            animation: increaseBorder 3.5s ease-in;
+            animation-fill-mode: forwards;
+            animation-play-state: running;
         }
         .splash-image {
             object-fit: contain;
             width: 10vh;
             height: 10vh;
-            animation: appear 4.1s ease-in;
+            animation: appear 3.5s ease-in;
+            animation-fill-mode: forwards;
+            animation-play-state: running;
         }
         @keyframes increaseBorder {
             0% {
@@ -63,9 +67,9 @@
                 left: calc(50vw - 5vh - 0.1em);
             }
             100% {
-                padding: 45vh;
-                top: 0;
-                left: calc(50vw - 50vh - 0.1em);
+                padding: 40vh;
+                top: 5vh;
+                left: calc(50vw - 45vh - 0.1em);
             }
         }
         @media screen and (max-device-width: 900px) {
