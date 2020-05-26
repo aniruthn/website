@@ -106,7 +106,7 @@ nav a, footer a, .side-nav a {
     color: gray;
 }
 nav a:hover, footer a:hover, .side-nav a:hover {
-    color: #7AD7F0;
+    color: #00A2E8;
 }
 nav .logo {
     grid-area: logo;
@@ -761,7 +761,7 @@ main a:hover {
 }
 @keyframes changeButtonColor {
     from {background-color: white; color: black; box-shadow: 0px 1px 6px 0px whitesmoke;}
-    to {background-color: #7AD7F0; box-shadow: 0px 1px 6px 0px #7AD7F0;}
+    to {background-color: #00A2E8; box-shadow: 0px 1px 6px 0px #00A2E8;}
 }
 button:hover {
     animation: changeButtonColor 200ms ease-in-out both;

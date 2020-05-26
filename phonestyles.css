@@ -116,7 +116,7 @@ nav a, footer a, .side-nav a {
     color: gray;
 }
 nav a:hover, footer a:hover, .side-nav a:hover {
-    color: #7AD7F0;
+    color: #00A2E8;
 }
 nav .logo {
     grid-area: logo;
