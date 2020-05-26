@@ -340,6 +340,8 @@ main {
     grid-area: hmpg-testimonials;
     display: grid;
     gap: 1.5em;
+    margin-left: 2em;
+    margin-right: 2em;
     grid-template-columns: 1fr;
     grid-auto-rows: auto;
     grid-template-areas: "testimonial-title" 
@@ -366,11 +368,26 @@ main {
     grid-area: testimonial-4;
 }
 .test-card {
-    margin-left: 2em;
-    margin-right: 2em;
+    display: grid;
+    grid-template-columns: 1fr 100px;
+    grid-auto-rows: auto;
+    grid-template-areas: "test-text test-text" "test-bio test-pic";
+    padding: 2em;
+    gap: 2em;
+}
+.test-text {
+    grid-area: test-text;
+}
+.test-bio {
+    grid-area: test-bio;
+    max-width: 18em;
+}
+.test-pic {
+    grid-area: test-pic;
 }
 .test-card p {
-    margin: 2em;
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
 .test-card:hover {
     box-shadow: 0 0 2em .25em black;
@@ -550,6 +567,20 @@ main a:hover {
     gap: 2em;
     grid-template-columns: 1fr;
     grid-auto-rows: auto;
+}
+.news-snippet {
+    background-image: url(img/newspaper-background.jpg);
+    background-size: cover;
+    padding: 2em;
+    width: auto;
+}
+.news-snippet p, .news-snippet h3, .news-snippet a {
+    color: black;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.news-snippet p {
+    margin-top: 1em;
 }
 
 /*portfolio styles*/
