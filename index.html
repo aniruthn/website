@@ -29,6 +29,10 @@
             background-color: #161c20;
             width: 100vw;
             overflow: hidden;
+            margin: 0;
+        }
+        body {
+            margin: 0;
         }
         .frame {
             position: relative;
@@ -36,33 +40,47 @@
         .image-container {
             position: absolute;
             top: 45vh;
-            left: calc(50vw - 5vh);
+            left: calc(50vw - 5vh - 0.1em);
             width: 10vh;
             height: 10vh;
             display: block;
             margin: auto;
-            border: 0.1em dashed rgb(58, 184, 226);
+            border: 0.1em solid #00A2E8;
             border-radius: 50%;
-            box-shadow: 0 0 0.1em 0 rgb(58, 184, 226);
-            animation: increaseBorder 5.1s ease-in;
+            box-shadow: 0 0 0.1em 0 #00A2E8;
+            animation: increaseBorder 4.1s ease-in;
         }
         .splash-image {
             object-fit: contain;
             width: 10vh;
             height: 10vh;
-            animation: appear 5.1s ease-in;
+            animation: appear 4.1s ease-in;
         }
         @keyframes increaseBorder {
             0% {
                 padding: 0;
                 top: 45vh;
-                left: calc(50vw - 5vh);
+                left: calc(50vw - 5vh - 0.1em);
             }
             100% {
                 padding: 45vh;
                 top: 0;
-                left: calc(50vw - 50vh);
+                left: calc(50vw - 50vh - 0.1em);
             }
+        }
+        @media screen and (max-device-width: 900px) {
+            @keyframes increaseBorder {
+            0% {
+                padding: 0;
+                top: 45vh;
+                left: calc(50vw - 5vh - 0.1em);
+            }
+            100% {
+                padding: 20vh;
+                top: 25vh;
+                left: calc(50vw - 25vh - 0.1em);
+            }
+        }
         }
         @keyframes appear {
             0% {
@@ -78,11 +96,10 @@
             }
         }
     </style>
-
     <script type="text/javascript">
         window.onload=timeout;
         function timeout() {
-            window.setTimeout("redirect()", 5000)
+            window.setTimeout("redirect()", 4000)
         }
         function redirect() {
             window.location = "home.html"
