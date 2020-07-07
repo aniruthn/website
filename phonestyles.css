@@ -462,7 +462,6 @@ main {
 }
 main a {
     color: #e5e5e5;
-    text-decoration: none;
 }
 main a:hover {
     color: gray;
@@ -631,12 +630,16 @@ main a:hover {
     grid-template-columns: 1fr;
     grid-auto-rows: auto;
     grid-template-areas: "side-nav" "projects-intro"
+    "publications-list"
     "projects-descriptions";
+}
+.projects-main h3 {
+    text-align: center;
 }
 .projects-title {
     text-align: center;
 }
-.projects-intro, .projects-descriptions {
+.projects-intro, .projects-descriptions, .publications-list {
     margin-left: 2em;
     margin-right: 2em;
     padding-left: 2em;
@@ -644,6 +647,9 @@ main a:hover {
 }
 .projects-intro {
     grid-area: projects-intro;
+}
+.publications-list {
+    grid-area: publications-list;
 }
 .projects-descriptions {
     grid-area: projects-descriptions;
